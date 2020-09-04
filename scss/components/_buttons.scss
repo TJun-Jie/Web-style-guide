@@ -1,0 +1,30 @@
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+  }
+  
+  .default {
+    @include button-background($color-default);
+  }
+  
+  .error {
+    @include button-background($color-error);
+  }
+  
+  .info {
+    @include button-background($color-info);
+  }
+  
+  .success {
+    @include button-background($color-success);
+  }
+  
+  .warning {
+    @include button-background($color-warning); 
+  }

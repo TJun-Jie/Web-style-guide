@@ -1,0 +1,54 @@
+@media (min-width: $breakpoint-md) {
+
+    .container {
+      max-width: 1400px;
+      @include center;
+    }
+    
+    .centered {
+      @include center;
+    }
+    
+    .row {
+      flex-direction: row;
+    }
+    
+    [class^=col] {
+      @include flexy($justify: center, $align: center);
+      margin-top: 0;
+    }
+    
+    [class^=col] + [class^=col] {
+      margin-left: 10px;
+    }
+    
+
+
+    @for $i from 1 through 12 {
+      .col-#{$i}{
+        flex-basis: 100/(12/$i) * 1%;
+      }
+    }
+    
+    .nav {
+      @include flexy($direction: row, $align: center, $justify: flex-end);
+      &-link{
+        flex-basis: 100px;
+      }
+    }
+    
+
+    
+    .btn {
+      padding: 10px 30px;
+    }
+    
+    .btn + .btn {
+      margin-left: 10px;
+    }
+    
+    .logo {
+      margin-left: initial;
+      margin-right: initial;
+    }
+}

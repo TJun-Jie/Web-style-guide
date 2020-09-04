@@ -1,0 +1,27 @@
+@mixin button-background($color) {
+    background-color: $color;
+    &:hover{
+        background-color: lighten($color, 10%);
+    }
+}
+
+
+@mixin img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flexy($direction: null, $wrap: null, $justify: null, $align:null) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
